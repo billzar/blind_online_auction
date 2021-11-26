@@ -1,0 +1,24 @@
+from replit import clear
+
+new_user = True
+bitting_library = {}
+
+while new_user:
+  
+  print("Welcome to the secret auction program.")
+  bitter_name = input("What is your name?  ")
+
+  bit = int(input("Whats your bit?  $"))
+  
+  bitting_library[bitter_name] = bit
+
+  ask_for_more = input("Is there any more bitters? yes / no :")
+  if ask_for_more == "yes":
+    clear()
+  else:
+    new_user = False
+
+max_bitter = max(bitting_library, key = bitting_library.get)
+max_bit = bitting_library[max_bitter]
+
+print(f"The winner is {max_bitter} with a bit of {max_bit}")
